@@ -1,0 +1,168 @@
+.service-box-item{
+    width: 370px;
+    padding: 50px 50px 40px 25px;
+    border-radius: 8px;
+    transition: .3s;
+    background: #f6f6f6;
+}
+
+.service-icon i{
+    font-size: 40px;
+    color: #ffffff;
+    background: #48cda0;
+    padding: 28px 23px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.service-icon::before{
+    content: '';
+    width: 70px;
+    height: 80px;
+    position: absolute;
+    background: #9bf5d7;
+    left: 13px;
+    top: -50px;
+}
+
+.service-icon{
+    position: relative;
+    display: flex;
+}
+
+h4.service-title{
+    font-size: 23px;
+    font-weight: 700;
+    color: #333333;
+    padding-bottom: 10px;
+}
+
+p.service-details{
+    font-size: 17px;
+    line-height: 22px;
+    color: #787878;
+}
+
+a.read-more-btn{
+    text-decoration: none;
+    color: #48cda0;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 10px;
+}
+
+a.read-more-btn::before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #48cda0;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+
+.service-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: stretch;
+}
+
+.service-detail{
+    padding: 25px 0px;
+}
+
+.service-box-item:hover{
+    background: #ffffff;
+    box-shadow: 0px 0px 20px 1px #e2e2e2;
+    margin-top: -20px;
+}
+
+.service2 .service-icon::before{
+    background: #fbe6df;
+}
+
+.service2 .service-icon i{
+    background: #ed5f38;
+    padding: 28px 23px;
+}
+
+.service3 .service-icon::before{
+    background: #d7ebff;
+}
+
+.service3 .service-icon i{
+    background: #007eff;
+}
+
+.service4 .service-icon::before{
+    background: #ebe4cb;
+    left: 13px;
+}
+
+.service4 .service-icon i{
+    background: #e6bc12;
+    padding: 28px 31px;
+}
+
+.service5 .service-icon::before{
+    background: #fbe0f8;
+    left: 14px;
+}
+
+.service5 .service-icon i{
+    background: #ed38d1;
+    padding: 28px;
+}
+
+.service6 .service-icon::before{
+    background: #f1e2f7;
+}
+
+.service6 .service-icon i{
+    background: #a347cc;
+    padding: 28px;
+}
+
+.service2 a.read-more-btn{
+    color: #ed5f38;
+}
+
+.service2 a.read-more-btn::before{
+    background: #ed5f38;
+}
+
+.service3 a.read-more-btn{
+    color: #007eff;
+}
+
+.service3 a.read-more-btn::before{
+    background: #007eff;
+}
+
+.service4 a.read-more-btn{
+    color: #e6bc12;
+}
+
+.service4 a.read-more-btn::before{
+    background: #e6bc12;
+}
+
+.service5 a.read-more-btn{
+    color: #ed38d1;
+}
+
+.service5 a.read-more-btn::before{
+    background: #ed38d1;
+}
+
+.service6 a.read-more-btn{
+    color: #a347cc;
+}
+
+.service6 a.read-more-btn::before{
+    background: #a347cc;
+}

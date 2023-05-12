@@ -1,0 +1,243 @@
+.portfolio-filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+button.portfolio-filter-btn{
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    padding: 15px;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #333333;
+    cursor: pointer;
+}
+
+button.portfolio-filter-btn.active{
+    color: #fd5325;
+}
+
+.portfolio-contents{
+    width: 385px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    animation: portfolioView .3s;
+}
+
+@keyframes portfolioView{
+    0%{
+        transform: scale(0.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.portfolio-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.portfolio-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.portfolio-detail{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(253, 83, 37, 0.7);
+    padding: 20px 40px;
+    transform: scaleX(0);
+    transition: .3s;
+}
+
+button.view-portfolio-detail{
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+h4.portfolio-title{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+p.portfolio-hover-summary{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.portfolio-hover-txt{
+    padding: 100px 25px 0px;
+}
+
+.portfolio-contents:hover .portfolio-detail{
+    transform: scaleX(1);
+}
+
+.portfolio-contents:hover .portfolio-img img{
+    transform: scale(1.2);
+}
+
+.portfolio-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.portfolio-lightbox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    display: none;
+}
+
+.lightbox-contents{
+    width: 800px;
+    height: 600px;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    overflow-y: visible;
+    position: relative;
+    animation: inAnimation .3s;
+}
+
+@keyframes inAnimation{
+    0%{
+        transform: scale(0.6);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+button.lightbox-close{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background: #fd5325;
+    border: 0;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button.lightbox-close:hover{
+    background: #333333;
+}
+
+h1.project-title{
+    text-align: center;
+    color: #fd5325;
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+ul.project-info{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    padding-bottom: 10px;
+}
+
+ul.project-info li{
+    font-family: 'Rubik', sans-serif;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #333333;
+}
+
+ul.project-info li span, a{
+    font-weight: 500;
+    padding-left: 5px;
+    color: #333333;
+    transition: .3s;
+    text-decoration: none;
+}
+
+ul.project-info li i{
+    padding-right: 8px;
+    font-size: 17px;
+    color: #333333;
+}
+
+ul.project-info li:first-child i{
+    padding-right: 15px;
+}
+
+ul.project-info li a:hover{
+    color: #fd5325;
+}
+
+p.portfolio-lightbox-summary{
+    color: #787878;
+    font-size: 18px;
+    padding-bottom: 25px;
+}
+
+.lightbox-img{
+    width: 100%;
+    height: 350px;
+}
+
+.lightbox-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-box-item.hide{
+    display: none;
+    transform: translateX(0px);
+    z-index: auto;
+}
+
+.portfolio-box-item.show{
+    display: block;
+}
+
+.portfolio-lightbox.open{
+    display: flex;
+}
